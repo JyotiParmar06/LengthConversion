@@ -35,7 +35,7 @@ public class Converter extends AppCompatActivity {
 
             ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, unitTypes);
 
-            
+
             convertFromUnitTypeSpinner.setAdapter(spinnerAdapter);
             convertToUnitTypeSpinner.setAdapter(spinnerAdapter);
 

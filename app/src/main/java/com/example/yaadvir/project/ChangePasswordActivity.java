@@ -34,11 +34,10 @@ public class ChangePasswordActivity extends AppCompatActivity {
             } else {
 
                 if (!newpswrd.getText().toString().equals(currentpswrd.getText().toString())) {
-                    Toast.makeText(getBaseContext(), "Password does not match with your new password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), "Password does not match", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent myIntent = new Intent(getApplicationContext(), Login.class);
-                    newpassword = newpswrd.toString();
-                    myIntent.putExtra("newpassword", newpassword);
+                    newpassword = newpswrd.getText().toString();
                     startActivity(myIntent);
 
 
@@ -48,7 +47,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 }
             }
         } else {
-            Toast.makeText(getBaseContext(), "Password does not match", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Password does not match with old password", Toast.LENGTH_SHORT).show();
         }
     }
 
